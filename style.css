@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko&family=Yanone+Kaffeesatz&display=swap');
+
+/* font-family: 'Teko', sans-serif;
+font-family: 'Yanone Kaffeesatz', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+}
+
+/* CUSOR */
+.cursor {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  /* border: 3px solid white; */
+  border-radius: 50%;
+  backdrop-filter: invert(1);
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+/* Preloader */
+.pre-loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  z-index: 999;
+}
+.greet {
+  font-size: 2.5rem;
+}
+.loader-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40px;
+  background-color: black;
+}
+.dot {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.dot1 {
+  animation: jump-up 0.6s 0.1s linear infinite;
+}
+.dot2 {
+  animation: jump-up 0.6s 0.2s linear infinite;
+}
+.dot3 {
+  animation: jump-up 0.6s 0.3s linear infinite;
+}
+@keyframes jump-up {
+  50% {
+    transform: translate(0, 15px);
+  }
+}
+
+.navbar {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  border-bottom: 0.1px solid white;
+}
+.logo {
+  border: 2px solid white;
+  padding: 9px 10px;
+  border-radius: 50%;
+}
+.btn-container {
+  z-index: 1;
+}
+.menu {
+  border: 2px solid white;
+  padding: 5px 12px;
+  margin-right: 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  background: none;
+  color: white;
+}
+.menu-active {
+  height: 3.5rem;
+  width: 3.5rem;
+  border: 2px solid rgb(110, 110, 110);
+  border-radius: 50%;
+  background-color: yellow;
+  color: black;
+}
+/* .menu-item {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+} */
+.ham-menu {
+  position: absolute;
+  width: 99vw;
+  height: 100vh;
+  top: 0px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  display: none;
+  transition: all 0.5s ease;
+}
+.ham-display {
+  display: flex;
+}
+
+.ham-menu div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50rem;
+  height: 100%;
+  /* font-size: 2rem; */
+  background-color: black;
+  border-right: 0.1px solid white;
+  border-left: 0.1px solid white;
+  transition: all 0.3s ease;
+}
+.ham-menu div:hover {
+  background-color: white;
+  color: black;
+}
+.ham-menu div p {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.ham-menu div:hover p {
+  opacity: 1;
+}
+
+.ham-menu div h1 {
+  font-size: 5rem;
+}
